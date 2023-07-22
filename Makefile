@@ -6,7 +6,7 @@
 #    By: zoukaddo <zoukaddo@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/22 03:30:23 by zoukaddo          #+#    #+#              #
-#    Updated: 2023/07/22 03:33:08 by zoukaddo         ###   ########.fr        #
+#    Updated: 2023/07/22 03:34:20 by zoukaddo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,6 @@ CC = cc
 NAME = fractol
 
 CFLAGS = -Wall -Wextra -Werror -I./minilibx
-
 
 
 all : $(NAME)
