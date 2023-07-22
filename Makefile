@@ -6,31 +6,36 @@
 #    By: zoukaddo <zoukaddo@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/22 03:30:23 by zoukaddo          #+#    #+#              #
-#    Updated: 2023/07/22 03:34:20 by zoukaddo         ###   ########.fr        #
+#    Updated: 2023/07/22 03:49:55 by zoukaddo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-CC = cc 
+CC = gcc 
 
 NAME = fractol
 
-CFLAGS = -Wall -Wextra -Werror -I./minilibx
+CFLAGS =  -I./minilibx
 
+Linux_flag = -L/usr/lib -lXext -lX11 -lm -lz
+
+MLX_LIB = ./minilibx-linux/libmlx.a
+
+SRC = main.c
 
 all : $(NAME)
 
 bonus : all
 
 
-$(NAME) : $(OBJS) $(LIBFT) $(MINILIBX)
-	$(CC) $(CFLAGS) $(NAME)
+$(NAME) :
+	$(CC) $(SRC) $(CFLAGS) -o $(NAME)  $(MLX_LIB) $(Linux_flag)
 
 clean :
-	$(RM) $(OBJS)
+	rm -rf $(NAME)
 
 fclean : clean
-	$(RM) $(NAME)
+	rm -rf $(NAME)
 
 re : fclean all
 
-.PHONY : all clean fclean bonus re
+.PHONY : all clean fclean re
