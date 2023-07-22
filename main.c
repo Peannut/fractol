@@ -6,7 +6,7 @@
 /*   By: zoukaddo <zoukaddo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/22 03:34:31 by zoukaddo          #+#    #+#             */
-/*   Updated: 2023/07/22 03:46:28 by zoukaddo         ###   ########.fr       */
+/*   Updated: 2023/07/22 03:58:21 by zoukaddo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int main(int ac, char **av)
 	void	*mlx_win;
 
 	mlx = mlx_init();
-	mlx_win = mlx_new_window(mlx, 1920, 1080, "Hello world!");
+	mlx_win = mlx_new_window(mlx, 800, 720, "Hello world!");
 	mlx_loop(mlx);
 	return (0);
 }
